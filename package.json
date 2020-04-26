@@ -1,10 +1,17 @@
 {
   "name": "chantodo-core",
   "version": "0.1.0",
-  "description": "",
+  "description": "A personal career application to connect Recruters and Developers ",
   "main": "index.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc -p . -outDir out/",
+    "lint": "eslint --config=./.eslintrc.js --ext .js,.jsx,.ts,.tsx ./",
+    "lint:fix": "yarn lint --fix",
+    "start": "node server.ts",
+    "test": "jest --coverage",
+    "test:clean": "rm -rf coverage src/**/*.js src/**/*.map",
+    "test:watch": "jest --coverage --watchAll",
+    "view:coverage": "serve coverage/lcov-report"
   },
   "repository": {
     "type": "git",
@@ -18,6 +25,18 @@
   },
   "homepage": "https://github.com/chantodo/chantodo-core#readme",
   "devDependencies": {
+    "@types/jest": "^25.2.1",
+    "@types/node": "^13.13.2",
+    "@typescript-eslint/eslint-plugin": "^2.29.0",
+    "@typescript-eslint/parser": "^2.29.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-typescript": "^7.2.1",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-prettier": "^3.1.3",
+    "jest": "^25.4.0",
+    "prettier": "^2.0.5",
+    "ts-jest": "^25.4.0",
     "typescript": "^3.8.3"
   }
 }
