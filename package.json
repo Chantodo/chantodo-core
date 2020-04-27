@@ -1,7 +1,7 @@
 {
   "name": "chantodo-core",
   "version": "0.1.0",
-  "description": "A personal career application to connect Recruters and Developers ",
+  "description": "A personal career application to connect Recruters and Developers",
   "main": "index.ts",
   "scripts": {
     "build": "tsc -p . -outDir out/",
@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/chantodo/chantodo-core#readme",
   "devDependencies": {
+    "@types/express": "^4.17.6",
     "@types/jest": "^25.2.1",
     "@types/node": "^13.13.2",
     "@typescript-eslint/eslint-plugin": "^2.29.0",
@@ -38,5 +39,9 @@
     "prettier": "^2.0.5",
     "ts-jest": "^25.4.0",
     "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
   }
 }
